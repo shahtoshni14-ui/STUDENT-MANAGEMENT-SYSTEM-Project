@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🎓 Student Management System</h1>
+
+    <p class="subtitle">
+        Student Management System built using HTML, CSS, JavaScript and Local Storage.
+        Supports CRUD Operations, Search and CSV Export.
+    </p>
+
+    <h2 id="studentCount">Total Students: 0</h2>
+
+    <div class="card">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter Student Name"
+        >
+
+        <input
+            type="number"
+            id="roll"
+            placeholder="Enter Roll Number"
+        >
+
+        <input
+            type="text"
+            id="branch"
+            placeholder="Enter Branch"
+        >
+
+        <input
+            type="number"
+            id="marks"
+            placeholder="Enter Marks"
+        >
+
+        <button id="submitBtn" onclick="addStudent()">
+            Add Student
+        </button>
+
+    </div>
+
+    <br>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Search by Name"
+        onkeyup="searchStudent()"
+    >
+
+    <br><br>
+
+    <button onclick="exportToCSV()">
+        📄 Export to CSV
+    </button>
+
+    <button onclick="clearAllStudents()">
+        🗑️ Clear All Data
+    </button>
+
+    <br><br>
+
+    <table id="studentTable">
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll No</th>
+                <th>Branch</th>
+                <th>Marks</th>
+                <th>Date Added</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="tableBody">
+            <!-- Students will be added here -->
+        </tbody>
+
+    </table>
+
+    <footer>
+        Developed by Toshni Shah © 2026
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
